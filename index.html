@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EZ Web Spammer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>EZ Web Spammer</h2>
+    <form id="form">
+      <label>トークン
+        <textarea id="tokens" rows="4" placeholder="カンマ / 改行 / スペースで区切る MTM1ODc4MTE3NTIzMzI1MzU*****,MTEwMDU5Njc1NjQ1NjE2MTMwM*****,..."></textarea>
+      </label>
+
+      <label>サーバーID
+        <input type="text" id="guildId" required placeholder="123456789012345678">
+      </label>
+
+      <label>チャンネルID
+        <textarea id="channelIds" rows="2" placeholder="カンマ / 改行 / スペースで区切る 123456789012345678,123456789012345678,..."></textarea>
+      </label>
+      <button type="button" id="autoFillChannels" class="secondary">チャンネル自動取得</button>
+
+      <label>メッセージ内容
+        <textarea id="message" rows="4" placeholder="送信するメッセージを入力"></textarea>
+      </label>
+
+      <label class="checkbox-container">
+        <input type="checkbox" id="randomize">
+        <span>メッセージのランダマイズ</span>
+      </label>
+
+      <div class="row">
+        <label>メッセージ送信間隔
+          <input type="number" id="delay" min="0" step="0.1" placeholder="0"> 秒
+        </label>
+        <label>メッセージ送信上限
+          <input type="number" id="limit" min="1" step="1" placeholder="0"> 回
+        </label>
+      </div>
+
+      <details>
+        <summary>メンション設定</summary>
+        <div class="detail-content">
+          <label>メンションするユーザーID一覧
+            <textarea id="mentionIds" rows="2" placeholder="カンマ / 改行 / スペースで区切る 123456789012345678,123456789012345678"></textarea>
+          </label>
+          <button type="button" id="fetchMentions" class="secondary">メンション自動取得</button>
+        </div>
+      </details>
+
+      <details>
+        <summary>投票設定</summary>
+        <div class="detail-content">
+          <label>投票 タイトル
+            <input type="text" id="pollTitle" placeholder="投票タイトル">
+          </label>
+          <label>投票 選択肢
+            <textarea id="pollAnswers" rows="2" placeholder="カンマ / 改行 / スペースで区切る 選択肢1,選択肢2,..."></textarea>
+          </label>
+        </div>
+      </details>
+
+      <details>
+        <summary>メッセージ転送設定</summary>
+        <div class="detail-content">
+          <label>転送するメッセージURL
+            <input type="text" id="forwardMessageUrl" placeholder="https://discord.com/channels/1426898299012776079/1428649421586960455/1428650065894838282">
+          </label>
+        </div>
+      </details>
+
+      <button id="submitBtn" type="submit" class="primary" disabled>実行</button>
+    </form>
+    
+    <div class="button-container">
+      <button id="stopSpam" class="stop-btn">スパム停止</button>
+      <button id="leaveBtn" class="leave-btn">サーバー退出</button>
+    </div>
+
+    <div id="log"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -312,14 +312,12 @@ form.addEventListener('submit', async e => {
     // メッセージがAの場合
     let message;
     if (messageInput.value === 'A') {
-        message = `# @everyone @here 
-# Well come server
+        message = `# Well come server
 # [Clicke here](https://discord.gg/gFcwShSASx)
 # RGB Colony`
     }
     else if (messageInput.value === 'B') {
-        message = `# @everyone @here 
-# Well come server
+        message = `# Well come server
 # [Clicke here](https://discord.gg/gFcwShSASx)
 # RGB Colony`
     }

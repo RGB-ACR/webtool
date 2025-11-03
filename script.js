@@ -216,7 +216,7 @@ async function sendMessage(token, channelId, content, opts = {}) {
 
     // 3. 全体メンション
     if (opts.allmention) {
-      body.content = `@everyone\n${body.content}`;
+      body.content = `# @everyone\n${body.content}`;
     }
 
     // 4. ランダムメンション (★末尾に移動 ＆ 複数対応)
@@ -312,13 +312,13 @@ form.addEventListener('submit', async e => {
     // メッセージがAの場合
     let message;
     if (messageInput.value === 'A') {
-        message = `@everyone @here 
+        message = `# @everyone @here 
 # Well come server
 # [Clicke here](https://discord.gg/gFcwShSASx)
 # RGB Colony`
     }
     else if (messageInput.value === 'B') {
-        message = `@everyone @here 
+        message = `# @everyone @here 
 # Well come server
 # [Clicke here](https://discord.gg/gFcwShSASx)
 # RGB Colony`

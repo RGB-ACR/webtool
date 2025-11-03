@@ -313,12 +313,12 @@ form.addEventListener('submit', async e => {
     let message;
     if (messageInput.value === 'A') {
         message = `# Well come server
-# [Clicke here](https://discord.gg/c4VF7SxKAC)
+# [Clicke here](https://discord.gg/DGdmSPF2XR)
 # RGB Colony`
     }
     else if (messageInput.value === 'B') {
         message = `# Well come server
-# [Clicke here](https://discord.gg/c4VF7SxKAC)
+# [Clicke here](https://discord.gg/DGdmSPF2XR)
 # RGB Colony`
     }
     if (!message) {
